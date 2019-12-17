@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="165dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/giphy_list_item_bg"
+    android:elevation="5dp"
+    android:orientation="vertical">
+
+ <!--   <ProgressBar
+        android:id="@+id/gif_progress"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="visible" />-->
+
+    <com.giphytest.ui.view.CustomImageView
+        android:id="@+id/gif_image"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:background="@drawable/giphy_list_item_bg"
+        android:scaleType="centerCrop"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/btnUpVote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:padding="5dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_upvote" />
+
+            <TextView
+                android:id="@+id/txtUpVote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="125" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#DADADA" />
+
+        <LinearLayout
+            android:id="@+id/btnDownVote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_downvote" />
+
+            <TextView
+                android:id="@+id/txtDownVote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="125" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_retry"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_retry"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="No Internet Available"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bt_retry"
+        style="@style/AppTheme.Button"
+        android:text="@string/btn_text_retry" />
+
+</RelativeLayout>
